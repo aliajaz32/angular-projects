@@ -1,18 +1,17 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HelloComponent } from './hello.component';
+import { ModalComponent } from './modal/modal';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
+declare const chance;
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports:      [ BrowserModule, FormsModule, InfiniteScrollModule ],
+  declarations: [ AppComponent, HelloComponent, ModalComponent ],
+  bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
